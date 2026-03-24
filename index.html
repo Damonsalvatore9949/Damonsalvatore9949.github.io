@@ -13,24 +13,31 @@ color:white;
 scroll-behavior:smooth;
 }
 
+/* BIG BRAND LOGO */
 .header {
-padding:20px;
+padding:30px 20px 10px 20px;
 text-align:center;
-font-size:100px;
+font-size:72px;
 color:#6BCFE0;
-font-weight:bold;
+font-weight:900;
+letter-spacing:3px;
+text-transform:uppercase;
 }
 
+/* SECTIONS */
 .section {
 padding:60px 20px;
 text-align:center;
 }
 
+/* TAGLINE SMALLER THAN LOGO */
 .hero {
-font-size:40px;
+font-size:30px;
 font-weight:bold;
+line-height:1.4;
 }
 
+/* BUTTON */
 .button {
 background:#6BCFE0;
 color:black;
@@ -39,8 +46,15 @@ border-radius:25px;
 text-decoration:none;
 display:inline-block;
 margin-top:20px;
+font-weight:bold;
+transition:0.3s;
 }
 
+.button:hover {
+opacity:0.8;
+}
+
+/* FLAVORS */
 .flavors {
 display:flex;
 flex-wrap:wrap;
@@ -67,20 +81,24 @@ border-top:1px solid #222;
 
 <body>
 
+<!-- BIG LOGO -->
 <div class="header">
-Minus Degrees
+MINUS DEGREES
 </div>
 
+<!-- HERO -->
 <div class="section hero">
 Cold. Creamy. Addictive.<br>
 <a href="#flavors" class="button">Explore Flavors</a>
 </div>
 
-<div class="section" id="about">
+<!-- ABOUT -->
+<div class="section">
 <h2 style="color:#6BCFE0;">About Us</h2>
 <p>Minus Degrees is a premium ice cream brand delivering rich flavors and smooth textures with a bold visual identity.</p>
 </div>
 
+<!-- FLAVORS -->
 <div class="section" id="flavors">
 <h2 style="color:#6BCFE0;">Our Flavors</h2>
 
@@ -95,11 +113,13 @@ Cold. Creamy. Addictive.<br>
 
 </div>
 
+<!-- WHY -->
 <div class="section">
 <h2 style="color:#6BCFE0;">Why Us</h2>
 <p>Premium look. Smooth texture. Designed for repeat cravings.</p>
 </div>
 
+<!-- CONTACT -->
 <div class="section">
 <h2 style="color:#6BCFE0;">Visit Us</h2>
 <p>Hyderabad<br>
@@ -107,6 +127,7 @@ Open 12 PM – 11 PM<br>
 Instagram: @minusdegrees</p>
 </div>
 
+<!-- FOOTER -->
 <div class="footer">
 © Minus Degrees
 </div>
