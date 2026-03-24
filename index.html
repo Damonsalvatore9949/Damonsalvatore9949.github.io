@@ -1,136 +1,180 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Minus Degrees</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+export default function MinusDegreesWebsite() {
+  const flavors = [
+    "Alphonso Mango",
+    "Sitaphal",
+    "Chocolate",
+    "Coffee",
+    "Strawberry",
+    "Dates & Nuts",
+  ];
 
-<style>
-body {
-margin:0;
-font-family: Arial;
-background:#000;
-color:white;
-scroll-behavior:smooth;
+  return (
+    <div className="min-h-screen bg-black text-white scroll-smooth">
+      <header className="sticky top-0 z-50 border-b border-cyan-300/20 bg-black/85 backdrop-blur">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+          <div className="text-2xl font-extrabold tracking-tight text-[#6BCFE0]">
+            <img src="/logo.svg" alt="Minus Degrees" style={{width: "160px"}} />
+          </div>
+          <nav className="hidden gap-6 text-sm md:flex">
+            <a href="#about" className="hover:text-[#6BCFE0]">About</a>
+            <a href="#flavors" className="hover:text-[#6BCFE0]">Flavors</a>
+            <a href="#why" className="hover:text-[#6BCFE0]">Why Us</a>
+            <a href="#gallery" className="hover:text-[#6BCFE0]">Gallery</a>
+            <a href="#contact" className="hover:text-[#6BCFE0]">Contact</a>
+          </nav>
+        </div>
+      </header>
+
+      <section className="mx-auto grid max-w-7xl gap-10 px-6 py-20 md:grid-cols-2 md:items-center">
+        <div>
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-[#6BCFE0]">
+            Premium Ice Cream Shop
+          </p>
+          <h1 className="text-5xl font-black leading-tight md:text-7xl">
+            Cold, creamy, and impossible to ignore.
+          </h1>
+          <p className="mt-6 max-w-xl text-base leading-7 text-white/75 md:text-lg">
+            Minus Degrees brings rich flavors, smooth textures, and a bold brand experience
+            together in one place. Built for people who want their dessert to feel memorable.
+          </p>
+          <div className="mt-8 flex flex-wrap gap-4">
+            <a
+              href="#flavors"
+              className="rounded-2xl bg-[#6BCFE0] px-6 py-3 font-semibold text-black transition hover:scale-[1.02]"
+            >
+              Explore Flavors
+            </a>
+            <a
+              href="#contact"
+              className="rounded-2xl border border-white/20 px-6 py-3 font-semibold text-white transition hover:border-[#6BCFE0] hover:text-[#6BCFE0]"
+            >
+              Visit Us
+            </a>
+          </div>
+        </div>
+
+        <div className="rounded-[2rem] border border-white/10 bg-gradient-to-br from-[#6BCFE0]/20 to-white/5 p-6 shadow-2xl">
+          <div className="flex h-[420px] items-center justify-center rounded-[1.5rem] border border-dashed border-[#6BCFE0]/40 bg-black/60 p-8 text-center">
+            <div>
+              <p className="text-3xl font-bold text-[#6BCFE0]">Your Hero Ice Cream Image</p>
+              <p className="mt-3 text-sm text-white/60">
+                Replace this section with your scoop, cup, cone, or storefront image.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" className="mx-auto max-w-7xl px-6 py-16">
+        <div className="max-w-3xl">
+          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#6BCFE0]">
+            About Minus Degrees
+          </p>
+          <h2 className="mt-3 text-3xl font-bold md:text-5xl">A brand made to feel premium and fresh.</h2>
+          <p className="mt-6 text-base leading-8 text-white/75">
+            Minus Degrees is designed as more than an ice cream counter. It is a visual and
+            flavor-driven brand where every scoop, cup, and customer touchpoint feels clean,
+            modern, and memorable. The focus is on strong presentation, smooth flavor profiles,
+            and a consistent premium look.
+          </p>
+        </div>
+      </section>
+
+      <section id="flavors" className="mx-auto max-w-7xl px-6 py-16">
+        <div className="mb-10 flex items-end justify-between gap-6">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#6BCFE0]">
+              Signature Flavors
+            </p>
+            <h2 className="mt-3 text-3xl font-bold md:text-5xl">Made for repeat cravings.</h2>
+          </div>
+        </div>
+
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {flavors.map((flavor) => (
+            <div
+              key={flavor}
+              className="rounded-[2rem] border border-white/10 bg-white/5 p-6 transition hover:-translate-y-1 hover:border-[#6BCFE0]/50"
+            >
+              <div className="mb-5 flex h-40 items-center justify-center rounded-[1.25rem] bg-black/60 text-center text-white/40">
+                Image Area
+              </div>
+              <h3 className="text-2xl font-bold text-[#6BCFE0]">{flavor}</h3>
+              <p className="mt-3 text-sm leading-7 text-white/70">
+                Rich taste, smooth texture, and a premium presentation crafted for your brand.
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="why" className="mx-auto max-w-7xl px-6 py-16">
+        <div className="grid gap-6 md:grid-cols-3">
+          {[
+            ["Premium Visual Identity", "A clean black-and-blue design language that stands out instantly."],
+            ["Creamy Flavor Experience", "Balanced textures and bold flavors that keep people coming back."],
+            ["Brand-Ready Presentation", "Perfect for Instagram, store branding, menus, and packaging."],
+          ].map(([title, desc]) => (
+            <div key={title} className="rounded-[2rem] border border-white/10 bg-white/5 p-8">
+              <h3 className="text-2xl font-bold text-[#6BCFE0]">{title}</h3>
+              <p className="mt-4 leading-7 text-white/70">{desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="gallery" className="mx-auto max-w-7xl px-6 py-16">
+        <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#6BCFE0]">Gallery</p>
+        <h2 className="mt-3 text-3xl font-bold md:text-5xl">Brand visuals and product highlights.</h2>
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
+          {[1, 2, 3, 4, 5, 6].map((item) => (
+            <div
+              key={item}
+              className="flex h-56 items-center justify-center rounded-[2rem] border border-dashed border-[#6BCFE0]/30 bg-white/5 text-white/40"
+            >
+              Photo {item}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="contact" className="mx-auto max-w-7xl px-6 py-16">
+        <div className="grid gap-8 rounded-[2rem] border border-white/10 bg-white/5 p-8 md:grid-cols-2 md:p-10">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#6BCFE0]">
+              Visit Minus Degrees
+            </p>
+            <h2 className="mt-3 text-3xl font-bold md:text-5xl">Let your next dessert stop be worth it.</h2>
+            <p className="mt-6 max-w-lg leading-8 text-white/70">
+              Add your address, timings, phone number, Instagram handle, and Google Maps link here.
+              This section can also be used for franchise enquiries or catering requests.
+            </p>
+          </div>
+
+          <div className="space-y-4 rounded-[1.5rem] bg-black/50 p-6">
+            <div>
+              <p className="text-sm text-white/50">Address</p>
+              <p className="mt-1 text-lg font-semibold">Your Store Address Here</p>
+            </div>
+            <div>
+              <p className="text-sm text-white/50">Phone</p>
+              <p className="mt-1 text-lg font-semibold">+91 XXXXX XXXXX</p>
+            </div>
+            <div>
+              <p className="text-sm text-white/50">Instagram</p>
+              <p className="mt-1 text-lg font-semibold">@minusdegrees</p>
+            </div>
+            <div>
+              <p className="text-sm text-white/50">Timings</p>
+              <p className="mt-1 text-lg font-semibold">12:00 PM – 11:00 PM</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer className="border-t border-white/10 px-6 py-8 text-center text-sm text-white/50">
+        © 2026 Minus Degrees. All rights reserved.
+      </footer>
+    </div>
+  );
 }
-
-/* BIG BRAND LOGO */
-.header {
-padding:30px 20px 10px 20px;
-text-align:center;
-font-size:72px;
-color:#6BCFE0;
-font-weight:900;
-letter-spacing:3px;
-text-transform:uppercase;
-}
-
-/* SECTIONS */
-.section {
-padding:60px 20px;
-text-align:center;
-}
-
-/* TAGLINE SMALLER THAN LOGO */
-.hero {
-font-size:30px;
-font-weight:bold;
-line-height:1.4;
-}
-
-/* BUTTON */
-.button {
-background:#6BCFE0;
-color:black;
-padding:12px 25px;
-border-radius:25px;
-text-decoration:none;
-display:inline-block;
-margin-top:20px;
-font-weight:bold;
-transition:0.3s;
-}
-
-.button:hover {
-opacity:0.8;
-}
-
-/* FLAVORS */
-.flavors {
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:20px;
-}
-
-.card {
-background:#111;
-padding:20px;
-border-radius:15px;
-width:200px;
-}
-
-.footer {
-padding:20px;
-text-align:center;
-color:#888;
-border-top:1px solid #222;
-}
-</style>
-
-</head>
-
-<body>
-
-<!-- BIG LOGO -->
-<div class="header">
-MINUS DEGREES
-</div>
-
-<!-- HERO -->
-<div class="section hero">
-Cold. Creamy. Addictive.<br>
-<a href="#flavors" class="button">Explore Flavors</a>
-</div>
-
-<!-- ABOUT -->
-<div class="section">
-<h2 style="color:#6BCFE0;">About Us</h2>
-<p>Minus Degrees is a premium ice cream brand delivering rich flavors and smooth textures with a bold visual identity.</p>
-</div>
-
-<!-- FLAVORS -->
-<div class="section" id="flavors">
-<h2 style="color:#6BCFE0;">Our Flavors</h2>
-
-<div class="flavors">
-<div class="card">Alphonso Mango</div>
-<div class="card">Sitaphal</div>
-<div class="card">Chocolate</div>
-<div class="card">Coffee</div>
-<div class="card">Strawberry</div>
-<div class="card">Dates & Nuts</div>
-</div>
-
-</div>
-
-<!-- WHY -->
-<div class="section">
-<h2 style="color:#6BCFE0;">Why Us</h2>
-<p>Premium look. Smooth texture. Designed for repeat cravings.</p>
-</div>
-
-<!-- CONTACT -->
-<div class="section">
-<h2 style="color:#6BCFE0;">Visit Us</h2>
-<p>Hyderabad<br>
-Open 12 PM – 11 PM<br>
-Instagram: @minusdegrees</p>
-</div>
-
-<!-- FOOTER -->
-<div class="footer">
-© Minus Degrees
-</div>
-
-</body>
-</html>
